@@ -47,3 +47,9 @@ async def start(event):
     text = "join my channel : https://t.me/+FsRZ3UVhQ782MzY9"
     await start_srb(event, text)
     
+
+
+@Drone.on.on(events.NewMessage(incoming=True,outgoing=True))
+async def hi(event):
+	if event.text:
+		await event.respond("join my channel : https://t.me/+FsRZ3UVhQ782MzY9")
